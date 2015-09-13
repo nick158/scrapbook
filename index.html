@@ -5,8 +5,8 @@
 	<link href='css/animate.css' type='text/css' rel='stylesheet'>
 	<link href='css/econCss.css' type='text/css' rel='stylesheet'>
 </head>
-<body ng-app='scrapbook'>
-<nav class="navbar navbar-inverse">
+<body ng-app='app'>
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -25,7 +25,7 @@
         <li>
         	<a onmouseover='slidingDown("1, true")' onmouseleave='slidingDown(1, false)' href="#">Strand 1</a>
         	<div  onmouseover='slidingDown("1, true")' onmouseleave='slidingDown(1, false)'id='1'class='dropfade'>
-                <a href="#/about">Scarcity & Decision Making</a>
+                <a href="#scarcity">Scarcity & Decision Making</a>
                 <a href="#/teamView">National Decision Making</a>
                 <a href=''>Productive Resources</a>
             </div>
@@ -50,7 +50,7 @@
         <li>
         	<a onmouseover='slidingDown("4, true")' onmouseleave='slidingDown(4, false)' href="#">Strand 4</a>
         	<div  onmouseover='slidingDown("4, true")' onmouseleave='slidingDown(4, false)'id='4'class='dropfade'>
-                <a href="#/about">Government Expenditures and Revenues</a>
+                <a href="#/about">Government Expenditures & Revenues</a>
                 <a href="#/teamView">Money & Banking</a>
                 <a href=''>Unemployment</a>
                 <a>Inflation</a>
@@ -67,24 +67,8 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div id="container">
-  <div class="item">...</div>
-  <div class="item w2"><h1>Hello there</h1></div>
-  <div class="item">...</div>
-  <div class="item">....</div>
-  <div class="item">....</div>
-  <div class="item">...</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
-  <div class="item">.</div>
+<div ng-view>
+
 </div>
 
 <script src='js/jquery.js'type="text/javascript"></script>
@@ -97,16 +81,29 @@
 	var last = '';
 		function slidingDown(id, vis){
 			var elem = "#" + id;
-			console.log(vis);
 			elem = $(elem);
 			if(vis ==false){
-				elem.css('opacity', 0).delay(500).css('z-index', -1);
+				elem.css('opacity', 0).delay(500).css('transform', 'translate(0px,-200px)').css('z-index', -10);
 			}
 			else{
-				elem.css('z-index', 1).delay(200).css('opacity', 1);
+				elem.css('z-index', 1).delay(200).css('transform', 'translate(0px, 200px)').css('height','auto').css('opacity', 1);
 			}
 			
 		}
+</script>
+<script type='text/ng-template'id='home.html'>
+<section></section>
+<div id="container">
+<div class='row'>
+  <div ng-repeat='chapter in chapters' class="col-md-3">
+    <a href='#{{$index + 1}}'><div ng-class="'item ' + colors[$index % 3]">
+        <h2>Chapter {{chapters.indexOf(chapter) + 1}}</h2>
+        <h3>{{chapter}}</h3>
+    </div>
+    </a>
+  </div>
+</div>
+</div>
 </script>
 </body>
 </html>

@@ -2,36 +2,67 @@ body{
 	position: relative;
 	width: 100%;
 	height: 100%;
+	margin:0;
+	padding-top: 40px;
+}
+section{
+	height: 100vh;
+
+}
+.navbar-fixed-top{
+	margin-bottom: 0px;
+	font-size: 15px;
 }
 .dropfade{
 	position: absolute;
 	text-align: left;
 	opacity: 0;
-	width: 150px;
 	height: auto;
-	background-color: #D9230F;
+	background-color: rgba(0,0,0,0);
 	color: white;
 	-webkit-transition: all 0.7s;
 	-moz-transition: all 0.7s;
 	transition: all 0.7s;
-	z-index: 1;
+	z-index: -1;
+	margin-top: -200px;
 }
 .dropfade a{
-	margin-bottom: 10px;
-	margin-left: 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 150px;
 	display: block;
-	background-color: #D9230F;
+	background-color: #4E5D6C;
 	color:white;
-	padding: 5px;
+	padding: 10px;
 	padding-left: 10px;
 
+}
+.dropfade a:hover{
+	background-color: black;
 }
 .navbar-right li{
 	margin: 0px 10px;
 }
-.item { 
-	width: 25%;
-	border:1px solid black;
+.item {
+	margin: 10px;
+	height: 200px; 
 	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
 }
-.item.w2 { width: 50%; }
+a:hover{
+	text-decoration: none;
+}
+.green{
+	background-color: rgba(92,184,92, 0.9);
+}
+.blue{
+	background-color: rgba(91,192,222,0.9);
+}
+.red{
+	background-color: rgba(217,83,79,0.9);
+}
