@@ -25,6 +25,7 @@ section{
 	transition: all 0.7s;
 	z-index: -1;
 	margin-top: -200px;
+	box-shadow: 5px 5px 20px black;
 }
 .dropfade a{
 	-webkit-transition: all 0.3s;
@@ -39,10 +40,22 @@ section{
 
 }
 .dropfade a:hover{
-	background-color: black;
+	background-color: #303030;
 }
 .navbar-right li{
 	margin: 0px 10px;
+}
+#refs{
+	height: 300px;
+	width: 200px;
+	margin-left: 20px;
+	color: black;
+	background-color: rgba(255,255,255,0.7);
+	padding: 10px;
+	padding-top: 25px;
+}
+#refs p{
+	font-size: 16px;
 }
 .item {
 	margin: 10px;
@@ -53,6 +66,10 @@ section{
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
+}
+.item:hover{
+	animation: swing 0.5s;
+	-webkit-animation: swing 0.5s;
 }
 a:hover{
 	text-decoration: none;
@@ -65,4 +82,31 @@ a:hover{
 }
 .red{
 	background-color: rgba(217,83,79,0.9);
+}
+i{
+	margin-left: 40px;
+}
+.fa-money{
+	color: rgba(92,184,92, 0.9);
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
