@@ -1,2 +1,2 @@
 # scrapbook
-Economics Scrapbook using packery.js
+Economics Scrapbook using angular
