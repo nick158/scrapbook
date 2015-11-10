@@ -24,15 +24,15 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
-        	<a onmouseover='slidingDown("1, true")' onmouseleave='slidingDown(1, false)' href="#">Strand 1</a>
+        	<a onmouseover='slidingDown("1, true")' onmouseleave='slidingDown(1, false)' class='strand' href="#">Strand 1</a>
         	<div  onmouseover='slidingDown("1, true")' onmouseleave='slidingDown(1, false)'id='1'class='dropfade'>
-                <a href="#scarcity">Scarcity & Decision Making</a>
+                <a href="#c1">Scarcity & Decision Making</a>
                 <a href="#/teamView">National Decision Making</a>
                 <a href=''>Productive Resources</a>
             </div>
         </li>
         <li>
-        	<a onmouseover='slidingDown("2, true")' onmouseleave='slidingDown(2, false)' href="#">Strand 2</a>
+        	<a onmouseover='slidingDown("2, true")' onmouseleave='slidingDown(2, false)' class='strand' href="#">Strand 2</a>
         	<div  onmouseover='slidingDown("2, true")' onmouseleave='slidingDown(2, false)'id='2'class='dropfade'>
                 <a href="#/about">Demand, Supply & Markets</a>
                 <a href="#/teamView">Spectrum of Markets</a>
@@ -41,7 +41,7 @@
             </div>
         </li>
         <li>
-        	<a onmouseover='slidingDown("3, true")' onmouseleave='slidingDown(3, false)' href="#">Strand 3</a>
+        	<a onmouseover='slidingDown("3, true")' onmouseleave='slidingDown(3, false)' class='strand'href="#">Strand 3</a>
         	<div  onmouseover='slidingDown("3, true")' onmouseleave='slidingDown(3, false)'id='3'class='dropfade'>
                 <a href="#/about">The Entrepreneur</a>
                 <a href="#/teamView">Business Organization & Finance</a>
@@ -49,7 +49,7 @@
             </div>
         </li>
         <li>
-        	<a onmouseover='slidingDown("4, true")' onmouseleave='slidingDown(4, false)' href="#">Strand 4</a>
+        	<a onmouseover='slidingDown("4, true")' onmouseleave='slidingDown(4, false)' class='strand'href="#">Strand 4</a>
         	<div  onmouseover='slidingDown("4, true")' onmouseleave='slidingDown(4, false)'id='4'class='dropfade'>
                 <a href="#/about">Government Expenditures & Revenues</a>
                 <a href="#/teamView">Money & Banking</a>
@@ -58,7 +58,7 @@
             </div>
         </li>
         <li>
-        	<a onmouseover='slidingDown("5, true")' onmouseleave='slidingDown(5, false)' href="#">Strand 5</a>
+        	<a onmouseover='slidingDown("5, true")' onmouseleave='slidingDown(5, false)' class='strand' href="#">Strand 5</a>
         	<div  onmouseover='slidingDown("5, true")' onmouseleave='slidingDown(5, false)'id='5'class='dropfade'>
                 <a href="#/about">Economic Growth & Productivity</a>
                 <a href="#/teamView">International Trade</a>
@@ -68,10 +68,12 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div ng-view>
+<div ng-view autoscroll='true'>
 
 </div>
-
+<footer>
+	Nicholas Chan 2015
+</footer>
 <script src='js/jquery.js'type="text/javascript"></script>
 <script src='js/angular.min.js'type="text/javascript"></script>
 <script src='js/bootstrap.min.js'type="text/javascript"></script>
@@ -93,7 +95,7 @@
 			
 		}
 </script>
-<script type='text/ng-template'id='home.html'>
+<script type='text/ng-template' id='home.html'>
 <section>
 <br>
 <br>
@@ -124,13 +126,25 @@
 <div id="container">
 <div class='row'>
   <div ng-repeat='chapter in chapters' class="col-md-3">
-    <a href='#{{$index + 1}}'><div ng-class="'animated '+ colors[$index % 3]+ ' item'">
+    <a href='index.html#/{{$index + 1}}'><div ng-class="'animated '+ colors[$index % 3]+ ' item'">
         <h2>Chapter {{chapters.indexOf(chapter) + 1}}</h2>
         <h3>{{chapter}}</h3>
     </div>
     </a>
   </div>
 </div>
+</div>
+</script>
+<script type='text/ng-template' id='temp.html'>
+<div class='image'>
+    <img class='unitPic' ng-src='{{unitPic}}'></img>
+    <img class='unitPic2' ng-src='{{unitPic2}}'></img>
+    <div class='title'>
+        <div class='cTitle'>
+        <h1>{{title}}</h1>
+        <h2>{{description}}</h2>
+        </div>
+    </div>
 </div>
 </script>
 </body>

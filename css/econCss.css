@@ -3,15 +3,72 @@ body{
 	width: 100%;
 	height: 100%;
 	margin:0;
-	padding-top: 40px;
+	padding-top: 8vh;
+	font-weight: 300;
+	overflow-x: hidden;
 }
 section{
 	height: 100vh;
 
 }
+footer{
+	width: 100vw;
+	background-color: rgb(34,34,34);
+	height: 100px;
+	color: white;
+	margin-top: 50px;
+	text-align: center;
+	padding-top: 20px;
+}
 .navbar-fixed-top{
 	margin-bottom: 0px;
 	font-size: 15px;
+	height:8vh;
+}
+.unitPic{
+	height: 92vh;
+	width: 100vw;
+	display: inline-block;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%) blur(5px);
+}
+.unitPic2{
+	z-index: 1;
+	height:  92vh;
+	width: 100vw;
+	overflow: hidden;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	margin-right: 50vw;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%) blur(5px);
+}
+.title{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 100vw;
+	height: 2;
+	z-index: 1;
+	background-color: rgba(0,0,0,0);
+	padding-top: 30vh;
+}
+.cTitle{
+	color: white;
+	width: 100vw;
+	height: 200px;
+	padding-top: 20px;
+	background-color: rgba(0,0,0,.75);
+}
+.cTitle h1, .cTitle h2{
+	line-height: 50px;
+}
+.image{
+	position: relative;
+	width:100%;
+	text-align: center;
 }
 .dropfade{
 	position: absolute;
@@ -33,7 +90,7 @@ section{
 	transition: all 0.3s;
 	width: 150px;
 	display: block;
-	background-color: #4E5D6C;
+	background-color: rgb(36,36,36);
 	color:white;
 	padding: 10px;
 	padding-left: 10px;
@@ -44,6 +101,9 @@ section{
 }
 .navbar-right li{
 	margin: 0px 10px;
+}
+.navbar-nav>li>a:hover{
+	background-color: rgb(36,36,36);
 }
 #refs{
 	height: 300px;
@@ -74,15 +134,16 @@ section{
 a:hover{
 	text-decoration: none;
 }
-.green{
-	background-color: rgba(92,184,92, 0.9);
+.col1{
+	background-color: #064E9F;
 }
-.blue{
-	background-color: rgba(91,192,222,0.9);
+.col2{
+	background-color: #2780E3;
 }
-.red{
-	background-color: rgba(217,83,79,0.9);
+.col3{
+	background-color: #77AFED ;
 }
+/*77AFED   #4D96E8;*/
 i{
 	margin-left: 40px;
 }
