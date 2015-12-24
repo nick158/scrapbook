@@ -3,20 +3,34 @@ body{
 	width: 100%;
 	height: 100%;
 	margin:0;
-	padding-top: 8vh;
 	font-weight: 300;
 	overflow-x: hidden;
+	font-family: "Open Sans", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: "Montserrat", sans-serif;
+}
+.jumbotron h1{
+	font-size: 50px;
+}
+.item h2, .item h3{
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
 }
 section{
 	height: 100vh;
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.center{
+	text-align: center;s
 }
 footer{
 	width: 100vw;
 	background-color: rgb(34,34,34);
 	height: 100px;
 	color: white;
-	margin-top: 50px;
 	text-align: center;
 	padding-top: 20px;
 }
@@ -31,6 +45,10 @@ footer{
 	display: inline-block;
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%) blur(5px);
+	-webkit-transition: all 0.5s;
+}
+#tHover:hover ~ .unitPic1{
+	-webkit-filter: blur(0px);
 }
 .unitPic2{
 	z-index: 1;
@@ -54,21 +72,6 @@ footer{
 	z-index: 1;
 	background-color: rgba(0,0,0,0);
 	padding-top: 30vh;
-}
-.cTitle{
-	color: white;
-	width: 100vw;
-	height: 200px;
-	padding-top: 20px;
-	background-color: rgba(0,0,0,.75);
-}
-.cTitle h1, .cTitle h2{
-	line-height: 50px;
-}
-.image{
-	position: relative;
-	width:100%;
-	text-align: center;
 }
 .dropfade{
 	position: absolute;
@@ -144,6 +147,7 @@ a:hover{
 	background-color: #77AFED ;
 }
 /*77AFED   #4D96E8;*/
+
 i{
 	margin-left: 40px;
 }
