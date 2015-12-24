@@ -1,4 +1,6 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute','ngAnimate']).config(function(){
+	new WOW().init();
+});
 // init
 app.config(['$routeProvider',function($routeProvider){
 	$routeProvider.when('/home',{
@@ -73,9 +75,44 @@ app.config(['$routeProvider',function($routeProvider){
 		redirectTo: '/home',
 	});
 }]);
+//runs animation
+app.animation('.animated-view', function() {
+  return {
+	  enter: function(element, done){
+		  $(element).css({
+			  opacity: 0,
+  			transition:"0.5s linear all"
+		  });
+		  $(element).css("-webkit-transition", "0.5s linear all");
+		  $(element).animate({
+			  opacity: 1
+		  },done);
+	  },
+	  leave: function(element, done){
+		  $(element).css({
+			  opacity: 1,
+  			transition:"0s linear all"
+		  });
+		  $(element).css("-webkit-transition", "0s linear all");
+		  $(element).animate({
+			  opacity: 0
+		  },done);
+	  }
+  };
+ 
+}); 
+app.directive("c1", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c1template.html"
+	}
+})
 app.controller('c1controller', function($scope){
 	$scope.title = 'Chapter 1';
 	$scope.description = 'Scarcity & Decision Making';
+	$scope.titleImage = "img/c1title.png";
+	$scope.templateId = "c1template.html";
 });
 app.controller('c2controller', function($scope){
 	$scope.title = 'Chapter 2';

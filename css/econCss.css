@@ -10,6 +10,9 @@ body{
 h1,h2,h3,h4,h5,h6{
 	font-family: "Montserrat", sans-serif;
 }
+.animated-view{
+	-webkit-transition:0.5s linear all,
+}
 .jumbotron h1{
 	font-size: 50px;
 }
@@ -22,9 +25,26 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 .center{
 	text-align: center;s
+}
+.chapter{
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5;
+}
+.image-container{
+	position: absolute;
+	top: 20vh;
+	left: 20vw;
+}
+.splash-img{
+	height: 200px;
+}
+.pulse{
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
 }
 footer{
 	width: 100vw;
