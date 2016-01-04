@@ -1,7 +1,18 @@
-var app = angular.module('app', ['ngRoute','ngAnimate']).config(function(){
+var app = angular.module('app', ['ngRoute','ngAnimate',"ngSanitize"]).config(function(){
 	new WOW().init();
 });
 // init
+function resetScroll(){
+	$("html,body").animate({
+		scrollTop: 0
+	},500)
+}
+function scrollJack(element){
+		$('html,body').animate({
+			scrollTop: $(element).offset().top
+		},900);
+}
+							  
 app.config(['$routeProvider',function($routeProvider){
 	$routeProvider.when('/home',{
 		templateUrl: 'home.html',
@@ -101,80 +112,103 @@ app.animation('.animated-view', function() {
   };
  
 }); 
+app.directive('compile', ['$compile', function ($compile) {
+    return function(scope, element, attrs) {
+        scope.$watch(
+            function(scope) {
+                // watch the 'compile' expression for changes
+                return scope.$eval(attrs.compile);
+            },
+            function(value) {
+                // when the 'compile' expression changes
+                // assign it into the current DOM
+                element.html(value);
+
+                // compile the new DOM and link it to the current
+                // scope.
+                // NOTE: we only compile .childNodes so that
+                // we don't get into infinite loop compiling ourselves
+                $compile(element.contents())(scope);
+            }
+        );
+    };
+}])
 app.directive("c1", function(){
 	return{
 		replace: true,
 		restrict: "E",
-		templateUrl: "c1template.html"
+		templateUrl: "c1template.html",
+		}
 	}
-})
-app.controller('c1controller', function($scope){
+);
+app.controller('c1controller', function($scope, $compile){
 	$scope.title = 'Chapter 1';
 	$scope.description = 'Scarcity & Decision Making';
 	$scope.titleImage = "img/c1title.png";
-	$scope.templateId = "c1template.html";
+	$scope.element = "<c1></c1>";
+	
 });
-app.controller('c2controller', function($scope){
+app.controller('c2controller', function($scope, $compile){
 	$scope.title = 'Chapter 2';
 	$scope.description = "National Decision Making";
 });
-app.controller('c3controller', function($scope){
+app.controller('c3controller', function($scope, $compile){
 	$scope.title = 'Chapter 3';
 	$scope.description = 'Productive Resources';
 });
-app.controller('c4controller', function($scope){
+app.controller('c4controller', function($scope, $compile){
 	$scope.title = 'Chapter 4';
 	$scope.description = "Demand, Supply & Markets";
 });
-app.controller('c5controller', function($scope){
+app.controller('c5controller', function($scope, $compile){
 	$scope.title = 'Chapter 5';
 	$scope.description = 'Spectrum of Markets';
 });
-app.controller('c6controller', function($scope){
+app.controller('c6controller', function($scope, $compile){
 	$scope.title = 'Chapter 6';
 	$scope.description = "Distribution";
 });
-app.controller('c7controller', function($scope){
+app.controller('c7controller', function($scope, $compile){
 	$scope.title = 'Chapter 7';
 	$scope.description = 'Labour Unions';
 });
-app.controller('c8controller', function($scope){
+app.controller('c8controller', function($scope, $compile){
 	$scope.title = 'Chapter 8';
 	$scope.description = "The Entrepreneur";
 });
-app.controller('c9controller', function($scope){
+app.controller('c9controller', function($scope, $compile){
 	$scope.title = 'Chapter 9';
 	$scope.description = 'Business Organization & Finance';
 });
-app.controller('c10controller', function($scope){
+app.controller('c10controller', function($scope, $compile){
 	$scope.title = 'Chapter 10';
 	$scope.description = "Consumption and Savings";
 });
-app.controller('c11controller', function($scope){
+app.controller('c11controller', function($scope, $compile){
 	$scope.title = 'Chapter 11';
 	$scope.description = "Government Expenditures & Revenue";
 });
-app.controller('c12controller', function($scope){
+app.controller('c12controller', function($scope, $compile){
 	$scope.title = 'Chapter 12';
 	$scope.description = "Money & Banking";
 });
-app.controller('c13controller', function($scope){
+app.controller('c13controller', function($scope, $compile){
 	$scope.title = 'Chapter 13';
 	$scope.description = 'Unemployment';
 });
-app.controller('c14controller', function($scope){
+app.controller('c14controller', function($scope, $compile){
 	$scope.title = 'Chapter 14';
 	$scope.description = "Inflation";
 });
-app.controller('c15controller', function($scope){
+app.controller('c15controller', function($scope, $compile){
 	$scope.title = 'Chapter 15';
 	$scope.description = 'Economic Growth & Productivity';
 });
-app.controller('c16controller', function($scope){
+app.controller('c16controller', function($scope, $compile){
 	$scope.title = 'Chapter 16';
 	$scope.description = "International Trade";
 });
-app.controller('homeController', function($scope){
+app.controller('homeController', function($scope, $compile){
 	 $(function(){
         $("#subtitle1").typed({
             strings: ["In Economics you learn about "],

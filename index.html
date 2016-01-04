@@ -6,6 +6,7 @@
 	<link href='css/animate.css' type='text/css' rel='stylesheet'>
     <link href='css/font-awesome.min.css' type='text/css' rel='stylesheet'>
 	<link href='css/econCss.css' type='text/css' rel='stylesheet'>
+	<link href="css/normalize.css" type="text/css" rel="stylesheet">
 </head>
 <body ng-app='app'>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -72,36 +73,20 @@
 <div ng-view autoscroll='true' class="animated-view">
 
 </div>
-<footer>
-	Nicholas Chan 2015
+<footer class="center">
+	<p class='footer-fix'>Nicholas Chan 2015</p>
 </footer>
 <script src='js/jquery.js'type="text/javascript"></script>
 <script src='js/angular.min.js'type="text/javascript"></script>
 <script src='js/bootstrap.min.js'type="text/javascript"></script>
 <script src='js/angular-route.min.js' type='text/javascript'></script>
-	<script src="js/wow.min.js" type="text/javascript"></script>
-	<script src="js/angular-animate.min.js" type="text/javascript"></script>
+<script src="js/angular-sanitize.min.js" type="text/javascript"></script>
+<script src="js/wow.min.js" type="text/javascript"></script>
+<script src="js/angular-animate.min.js" type="text/javascript"></script>
 <script src='js/typed.js'type="text/javascript"></script>
 <script src='js/app.js' type='text/javascript'></script>
-<script>
-	$(".strand").click(function() {
-		return false;
-	})
-	var last = '';
-		function slidingDown(id, vis){
-			var elem = "#" + id;
-			elem = $(elem);
-			if(vis ==false){
-				elem.css('opacity', 0).delay(500).css('transform', 'translate(0px,-200px)').css('z-index', -10);
-			}
-			else{
-				elem.css('z-index', 1).delay(200).css('transform', 'translate(0px, 200px)').css('height','auto').css('opacity', 1);
-			}
-			
-		}
-</script>
 <script type='text/ng-template' id='home.html'>
-<section>
+<section class="center-all">
 <br>
 <br>
     <div class='container'>
@@ -143,20 +128,94 @@
 </script>
 <script type='text/ng-template' id='temp.html'>
 <div>
-	<section class="titlePage">
+	<section class="titlePage center-all">
 		<div class="image-container">
-			<img class="animated infinite pulse splash-img" ng-src="{{titleImage}}"/>
+			<img class="splash-img" ng-src="{{titleImage}}"/>
 		</div>
 		<div class="center">
 			<h1>{{title}}</h1>
 			<h2>{{description}}</h2>		
 		</div>
+		<div class="scroll-jack jack-center"><span onclick="scrollJack('#top')" class="fa fa-chevron-down animated infinite pulse" id='scroll-arrow'></span></div>
 	</section>
-	<c1></c1>
+	<div autoscroll='true' compile="element"></div>
 </div>
 </script>
 <script type="text/ng-template" id="c1template.html">
-	<p>hey</p>
+	<div id="top">
+		<section class="section-padding">
+			<div class="container">
+				<div class="row">
+				<div class="col-md-6">
+					<article class="article-content">
+					<h1>'Great Pacific Garbage Patch' researchers devastated by sight</h1>
+						<p>Far away from California's coast, where the Pacific Ocean currents swirl, the blue of the sea was replaced by fishing nets, buckets, buoys, laundry baskets and unidentifiable pieces of plastic that floated past the Ocean Star, a ship carrying a team of scientists and volunteers gathering data on plastic garbage.</p> 
+<p>"We were surrounded by an endless layer of garbage," sad Serena Cunsolo, an Italian marine biologist who works for The Ocean Cleanup. "It was devastating to see."</p> 
+<p>Cunsolo, 28, was one of a team of 15 researchers and volunteers aboard the Ocean Starr who a month ago set out from San Francisco to study the plastic waste as part of the "Mega Expedition," a major step in the organization's effort to eventually clean up what's known as the Great Pacific Garbage Patch.</p> 
+						<p>The 171-foot mother ship returned on Sunday to San Francisco, carrying massive white bags filled with plastic garbage along with two sailing boats with volunteers who helped collect the garbage samples.</p>
+						<a class="btn btn-primary topSpace" href="http://www.cbc.ca/news/world/great-pacific-garbage-patch-researchers-devastated-by-sight-1.3201111" target="_blank">Read More...</a>
+			</article>
+				</div>
+				<div class="col-md-6">
+					<div class="half-height">
+						<img class="article-img" src="img/pacificGarbage.jpg" />
+					</div>
+				</div>			
+				</div>
+			</div>
+			<div class="scroll-jack jack-right"><span onclick="scrollJack('#bottom')" class="fa fa-chevron-down animated infinite pulse" id='scroll-arrow'></span></div>
+		</section>
+		<section class="section-padding" id="bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<article class="article-content">
+							<h1>Summary</h1>
+							<p>
+							The terms which are relevant to “Chapter 1: Scarcity & Decision Making”’, are closely connected to the article on the Great Pacific Garbage Patch. The large amounts of plastic in the Garbage Patch are likely a result of <b>psychological wants</b>, the desiring of <b>goods</b> not essential to life. People demand low-cost goods to satisfy their psychological wants. The size of the Garbage Patch indicates that there is a lower <b>opportunity cost</b> for throwing away these plastic goods as compared to recycling them. The higher opportunity cost for recycling poses a sustainability issue as Earth’s <b>natural resources</b> slowly run out.
+							</p>
+							<br>
+							<br>
+							<iframe width="500" height="275" src="https://www.youtube.com/embed/D41rO7mL6zM" frameborder="0" allowfullscreen></iframe>
+						</article>
+					</div>
+					<div class="col-md-6">
+						<article class="article-content">
+							<h1>Terms</h1>
+							<ul class="terms">
+								<li><b>Psychological Wants:</b> The human want for those things that are not essential to sustain human life</li>
+								<li><b>Goods:</b> All concrete and visible things that satisfy human wants
+</li>
+								<li><b>Opportunity Cost:</b> The benefit lost in taking one course of action over the other
+</li>
+								<li><b>Natural Resources:</b> Resources that occur in nature that have value and can be used to produce goods.</li>							
+							</ul>
+						</article>
+						<div class="nextChapter center">
+							<a href="#/2">Next Chapter &nbsp;<span class="fa fa-chevron-right animated infinite pulse"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</script>
+	<script>
+	$(".strand").click(function() {
+		return false;
+	})
+	var last = '';
+	function slidingDown(id, vis){
+			var elem = "#" + id;
+			elem = $(elem);
+			if(vis ==false){
+				elem.css('opacity', 0).delay(500).css('transform', 'translate(0px,-200px)').css('z-index', -10);
+			}
+			else{
+				elem.css('z-index', 1).delay(200).css('transform', 'translate(0px, 200px)').css('height','auto').css('opacity', 1);
+			}	
+		};
+
 </script>
 </body>
 </html>

@@ -10,6 +10,79 @@ body{
 h1,h2,h3,h4,h5,h6{
 	font-family: "Montserrat", sans-serif;
 }
+p{
+	line-height: 25px;
+}
+.terms{
+	list-style: none;
+}
+.terms li{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.topSpace{
+	margin-top: 20px;
+	transition: all linear 0.25s;
+}
+.scroll-jack{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	position: absolute;
+	bottom: 40;
+	font-size: 40px;
+	cursor: pointer;
+}
+.jack-center{
+	left: 48%;
+}
+.jack-right{
+	right:23%
+}
+.left-float{
+	position: absolute;
+	left:0;
+}
+.nextChapter{
+	font-size: 35px;
+	height:300px;
+		display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nextChapter a{
+	color: #222222;
+}
+.right-top{
+	position: absolute;
+	top:0;
+	right: 0;
+	margin-top: 8vh;
+}
+.right-bottom{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.left-clear{
+	clear: left;
+}
+
+.half-height{
+	height: 46vh;
+	position: absolute;
+}
+.article-img{
+	width: 100%;
+	margin-top: 15vh;
+	margin-left: 20px;
+}
+.section-padding{
+	padding-top: 8vh;
+}
 .animated-view{
 	-webkit-transition:0.5s linear all,
 }
@@ -22,13 +95,16 @@ h1,h2,h3,h4,h5,h6{
 }
 section{
 	height: 100vh;
-	display: flex;
+	position: relative;
+}
+.center-all{
+		display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 }
 .center{
-	text-align: center;s
+	text-align: center;
 }
 .chapter{
 	animation-delay: 0.5s;
@@ -53,36 +129,17 @@ footer{
 	color: white;
 	text-align: center;
 	padding-top: 20px;
+	display: block;
+}
+.footer-fix{
+	margin: 0px;
 }
 .navbar-fixed-top{
 	margin-bottom: 0px;
 	font-size: 15px;
 	height:8vh;
 }
-.unitPic{
-	height: 92vh;
-	width: 100vw;
-	display: inline-block;
-	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%) blur(5px);
-	-webkit-transition: all 0.5s;
-}
-#tHover:hover ~ .unitPic1{
-	-webkit-filter: blur(0px);
-}
-.unitPic2{
-	z-index: 1;
-	height:  92vh;
-	width: 100vw;
-	overflow: hidden;
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	margin-right: 50vw;
-	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%) blur(5px);
-}
-.title{
+title{
 	display: inline-block;
 	position: absolute;
 	right: 0;
