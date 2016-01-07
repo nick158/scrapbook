@@ -136,7 +136,7 @@ app.directive("c1", function(){
 	return{
 		replace: true,
 		restrict: "E",
-		templateUrl: "c1template.html",
+		templateUrl: "c1template.html"
 		}
 	}
 );
@@ -144,7 +144,7 @@ app.directive("c2", function(){
 	return{
 		replace: true,
 		restrict: "E",
-		templateUrl: "c2template.html",
+		templateUrl: "c2template.html"
 		}
 	}
 );
@@ -152,7 +152,7 @@ app.directive("c3", function(){
 	return{
 		replace: true,
 		restrict: "E",
-		templateUrl: "c3template.html",
+		templateUrl: "c3template.html"
 		}
 	}
 );
@@ -160,7 +160,7 @@ app.directive("c4", function(){
 	return{
 		replace: true,
 		restrict: "E",
-		templateUrl: "c4template.html",
+		templateUrl: "c4template.html"
 		}
 	}
 );
@@ -168,7 +168,94 @@ app.directive("c5", function(){
 	return{
 		replace: true,
 		restrict: "E",
-		templateUrl: "c5template.html",
+		templateUrl: "c5template.html"
+		}
+	}
+);
+app.directive("c6", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c6template.html"
+		}
+	}
+);
+app.directive("c7", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c7template.html"
+	}
+});
+app.directive("c8", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c8template.html"
+		}
+	}
+);
+app.directive("c9", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c9template.html",
+		}
+	}
+);
+app.directive("c10", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c10template.html",
+		}
+	}
+);
+app.directive("c11", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c11template.html",
+		}
+	}
+);
+app.directive("c12", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c12template.html",
+		}
+	}
+);
+app.directive("c13", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c13template.html"
+		}
+	}
+);
+app.directive("c14", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c14template.html"
+		}
+	}
+);
+app.directive("c15", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c15template.html"
+		}
+	}
+);
+app.directive("c16", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c16template.html"
 		}
 	}
 );
