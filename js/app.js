@@ -2,14 +2,10 @@ var app = angular.module('app', ['ngRoute','ngAnimate',"ngSanitize"]).config(fun
 	new WOW().init();
 });
 // init
-function resetScroll(){
-	$("html,body").animate({
-		scrollTop: 0
-	},500)
-}
 function scrollJack(element){
+	var elem = $(element)
 		$('html,body').animate({
-			scrollTop: $(element).offset().top
+			scrollTop: elem.offset().top
 		},900);
 }
 							  
@@ -19,7 +15,7 @@ app.config(['$routeProvider',function($routeProvider){
 		controller: 'homeController'
 	}).when('/1',{
 		templateUrl: "temp.html",
-		controller: "c1controller"
+		controller: "c1controller",
 	})
 	.when('/2',{
 		templateUrl : "temp.html",
@@ -92,9 +88,9 @@ app.animation('.animated-view', function() {
 	  enter: function(element, done){
 		  $(element).css({
 			  opacity: 0,
-  			transition:"0.5s linear all"
+  			transition:"0.75s linear all"
 		  });
-		  $(element).css("-webkit-transition", "0.5s linear all");
+		  $(element).css("-webkit-transition", "0.75s linear all");
 		  $(element).animate({
 			  opacity: 1
 		  },done);
@@ -108,6 +104,9 @@ app.animation('.animated-view', function() {
 		  $(element).animate({
 			  opacity: 0
 		  },done);
+		  $('html,body').animate({
+			scrollTop: 0
+		},500);
 	  }
   };
  
@@ -141,72 +140,118 @@ app.directive("c1", function(){
 		}
 	}
 );
+app.directive("c2", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c2template.html",
+		}
+	}
+);
+app.directive("c3", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c3template.html",
+		}
+	}
+);
+app.directive("c4", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c4template.html",
+		}
+	}
+);
+app.directive("c5", function(){
+	return{
+		replace: true,
+		restrict: "E",
+		templateUrl: "c5template.html",
+		}
+	}
+);
 app.controller('c1controller', function($scope, $compile){
 	$scope.title = 'Chapter 1';
 	$scope.description = 'Scarcity & Decision Making';
 	$scope.titleImage = "img/c1title.png";
 	$scope.element = "<c1></c1>";
-	
 });
 app.controller('c2controller', function($scope, $compile){
 	$scope.title = 'Chapter 2';
 	$scope.description = "National Decision Making";
+	$scope.element = "<c2></c2>"
 });
 app.controller('c3controller', function($scope, $compile){
 	$scope.title = 'Chapter 3';
 	$scope.description = 'Productive Resources';
+	$scope.element = "<c3></c3>"
 });
 app.controller('c4controller', function($scope, $compile){
 	$scope.title = 'Chapter 4';
 	$scope.description = "Demand, Supply & Markets";
+	$scope.element = "<c4></c4>";
 });
 app.controller('c5controller', function($scope, $compile){
 	$scope.title = 'Chapter 5';
 	$scope.description = 'Spectrum of Markets';
+	$scope.element = "<c5></c5>";
 });
 app.controller('c6controller', function($scope, $compile){
 	$scope.title = 'Chapter 6';
 	$scope.description = "Distribution";
+	$scope.element = "<c6></c6>";
 });
 app.controller('c7controller', function($scope, $compile){
 	$scope.title = 'Chapter 7';
 	$scope.description = 'Labour Unions';
+	$scope.element = "<c7></c7>";
 });
 app.controller('c8controller', function($scope, $compile){
 	$scope.title = 'Chapter 8';
 	$scope.description = "The Entrepreneur";
+	$scope.element = "<c8></c8>";
 });
 app.controller('c9controller', function($scope, $compile){
 	$scope.title = 'Chapter 9';
 	$scope.description = 'Business Organization & Finance';
+	$scope.element = "<c9></c9>";
 });
 app.controller('c10controller', function($scope, $compile){
 	$scope.title = 'Chapter 10';
 	$scope.description = "Consumption and Savings";
+	$scope.element = "<c10></c10>";
 });
 app.controller('c11controller', function($scope, $compile){
 	$scope.title = 'Chapter 11';
 	$scope.description = "Government Expenditures & Revenue";
+	$scope.element = "<c11></c11>";
 });
 app.controller('c12controller', function($scope, $compile){
 	$scope.title = 'Chapter 12';
 	$scope.description = "Money & Banking";
+	$scope.element = "<c12></c12>";
 });
 app.controller('c13controller', function($scope, $compile){
 	$scope.title = 'Chapter 13';
 	$scope.description = 'Unemployment';
+	$scope.element = "<c13></c13>";
 });
 app.controller('c14controller', function($scope, $compile){
 	$scope.title = 'Chapter 14';
 	$scope.description = "Inflation";
+	$scope.element = "<c14></c14>";
 });
 app.controller('c15controller', function($scope, $compile){
 	$scope.title = 'Chapter 15';
 	$scope.description = 'Economic Growth & Productivity';
+	$scope.element = "<c15></c15>";
 });
 app.controller('c16controller', function($scope, $compile){
 	$scope.title = 'Chapter 16';
 	$scope.description = "International Trade";
+	$scope.element = "<c16></c16>";
 });
 app.controller('homeController', function($scope, $compile){
 	 $(function(){

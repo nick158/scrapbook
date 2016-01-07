@@ -93,14 +93,14 @@
     <hr>
         <div class='jumbotron'>
             <div class='container'>
-                <div class='col-md-9'>
+                <div class='col-md-9 col-sm-12'>
                     <h1>Economics Scrapbook</h1>
                     <br>
                     <p><span id='subtitle1'></span><span id='subtitle'></span></p>
                     <br>
                     <p><a id='scroll' class="btn btn-primary btn-lg">Ready to learn more?</a></p>
                 </div>
-                <div class='col-md-3'>
+                <div class='col-md-3 col-sm-12'>
                     <div id='refs'>
                         <p>CIE3M Individual and the Economy</p>
                         <p>Submitted to: M.Nicholson</p>
@@ -115,7 +115,7 @@
 </section>
 <div id="container">
 <div class='row'>
-  <div ng-repeat='chapter in chapters' class="wow animated pulse chapter col-md-3">
+  <div ng-repeat='chapter in chapters' class="wow animated pulse chapter col-md-3 col-sm-6">
     <a href='#/{{$index + 1}}'><div ng-class="'animated '+ colors[$index % 3]+ ' item'">
         <h2>Chapter {{chapters.indexOf(chapter) + 1}}</h2>
         <h3>{{chapter}}</h3>
@@ -143,11 +143,11 @@
 </script>
 <script type="text/ng-template" id="c1template.html">
 	<div id="top">
-		<section class="section-padding">
+		<div class="section-padding">
 			<div class="container">
 				<div class="row">
-				<div class="col-md-6">
-					<article class="article-content">
+				<div class="col-md-6 col-sm-12">
+					<article class="half-height">
 					<h1>'Great Pacific Garbage Patch' researchers devastated by sight</h1>
 						<p>Far away from California's coast, where the Pacific Ocean currents swirl, the blue of the sea was replaced by fishing nets, buckets, buoys, laundry baskets and unidentifiable pieces of plastic that floated past the Ocean Star, a ship carrying a team of scientists and volunteers gathering data on plastic garbage.</p> 
 <p>"We were surrounded by an endless layer of garbage," sad Serena Cunsolo, an Italian marine biologist who works for The Ocean Cleanup. "It was devastating to see."</p> 
@@ -156,31 +156,31 @@
 						<a class="btn btn-primary topSpace" href="http://www.cbc.ca/news/world/great-pacific-garbage-patch-researchers-devastated-by-sight-1.3201111" target="_blank">Read More...</a>
 			</article>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 col-sm-12">
 					<div class="half-height">
 						<img class="article-img" src="img/pacificGarbage.jpg" />
+						<div class="scroll-jack jack-center jack-bottom"><span onclick="scrollJack('#bottom')" class="fa fa-chevron-down animated infinite pulse" id='scroll-arrow'></span></div>
 					</div>
 				</div>			
 				</div>
 			</div>
-			<div class="scroll-jack jack-right"><span onclick="scrollJack('#bottom')" class="fa fa-chevron-down animated infinite pulse" id='scroll-arrow'></span></div>
-		</section>
-		<section class="section-padding" id="bottom">
+		</div>
+		<div class="section-padding" id="bottom">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<article class="article-content">
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
 							<h1>Summary</h1>
 							<p>
 							The terms which are relevant to “Chapter 1: Scarcity & Decision Making”’, are closely connected to the article on the Great Pacific Garbage Patch. The large amounts of plastic in the Garbage Patch are likely a result of <b>psychological wants</b>, the desiring of <b>goods</b> not essential to life. People demand low-cost goods to satisfy their psychological wants. The size of the Garbage Patch indicates that there is a lower <b>opportunity cost</b> for throwing away these plastic goods as compared to recycling them. The higher opportunity cost for recycling poses a sustainability issue as Earth’s <b>natural resources</b> slowly run out.
 							</p>
 							<br>
 							<br>
-							<iframe width="500" height="275" src="https://www.youtube.com/embed/D41rO7mL6zM" frameborder="0" allowfullscreen></iframe>
+							<iframe height="275" src="https://www.youtube.com/embed/D41rO7mL6zM" frameborder="0" allowfullscreen></iframe>
 						</article>
 					</div>
-					<div class="col-md-6">
-						<article class="article-content">
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
 							<h1>Terms</h1>
 							<ul class="terms">
 								<li><b>Psychological Wants:</b> The human want for those things that are not essential to sustain human life</li>
@@ -190,16 +190,207 @@
 </li>
 								<li><b>Natural Resources:</b> Resources that occur in nature that have value and can be used to produce goods.</li>							
 							</ul>
-						</article>
 						<div class="nextChapter center">
 							<a href="#/2">Next Chapter &nbsp;<span class="fa fa-chevron-right animated infinite pulse"></span></a>
 						</div>
+						</article>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
 </script>
+<script type="text/ng-template" id="c2template.html">
+	<div id="top">
+		<div class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="half-height">
+							<img class="article-img" src="img/decisionMaking.jpg" style="margin-left: -40px"/>
+							<div class="scroll-jack jack-center jack-bottom"><span onclick="scrollJack('#bottom')" class="fa fa-chevron-down animated infinite pulse" id='scroll-arrow' style="margin-left: -40px"></span></div>
+						</div>
+					</div>
+				<div class="col-md-6 col-sm-12">
+					<article class="half-height">
+							<h1>Business Elite See Income Inequality as a Threat to Business</h1>
+						<p>The income gap is concerning even those at the very top of the economic ladder, a new study shows.</p>
+						<p>A recent survey of Harvard Business School alumni shows that they are overall optimistic about U.S. business performance in the global economy. </p>
+						<p>In their view, barriers to entrepreneurship are lower compared to other countries and entrepreneurship is more accessible in America today than it was a decade ago, according to Harvard Business School's latest survey on U.S. competitiveness.
+						</p>
+						<p>Despite this sentiment, they're concerned that their businesses stand to suffer from the lack of shared prosperity in the U.S.</p>
+						<p>More than 70 percent of respondents say the lack of shared prosperity is a problem for their business--not just a social issue. Two thirds of respondents consider resolving rising inequality and middle-class stagnation a higher priority than boosting overall economic growth</p>
+				<a class="btn btn-primary topSpace" href="http://www.inc.com/graham-winfrey/hbs-2015-competitiveness-study.html" target="_blank">Read More...</a>
+					</article>
+				</div>
+			
+				</div>
+			</div>
+		</div>
+		<div class="section-padding" id="bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
+							<h1>Summary</h1>
+							<p>
+							This article has a strong relationship between the concepts discussed in ‘Chapter 2: National Decision Making.’USA is mainly a <b>market economy</b>, which is founded on the principles of <b>profit</b> and innovation. Unlike a <b>command or mixed economy</b>, it is the uncoordinated actions of buyers and sellers to decide which goods and services are produced. The article’s main concern is that the income inequality caused by the market economy in the USA may be creating barriers for individuals looking to innovate and create businesses in the US economy. Otherwise known as entrepreneurs.
+							</p>
+							<br>
+							<br>
+							<iframe height="275" src="https://www.youtube.com/embed/ePiNfceCB8M" frameborder="0" allowfullscreen></iframe>
+						</article>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
+							<h1>Terms</h1>
+							<ul class="terms">
+								<li><b>Market Economy:</b> An economy in which the uncoordinated actions of buyers and sellers of goods, services and resources direct the economic system</li>
+								<li><b>Profit:</b> The amount that is left over after all the costs have been met from the income of a business, the reward for an entrepreneur for taking on significant risk
+</li>
+								<li><b>Command Economy:</b> An economy where a central decision making body creates the answers for what, how, for whom goods and services are provided. Ex. The Soviet Union
+</li>
+								<li><b>Mixed Economy:</b> An economy where decisions about the allocation of resources falls upon both the buyers and seller, and the government. Ex. Canada</li>							
+							</ul>
+						<div class="nextChapter center" style="height: 175px">
+							<a href="#/3">Next Chapter &nbsp;<span class="fa fa-chevron-right animated infinite pulse"></span></a>
+						</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/ng-template" id="c3template.html">
+<div id="top">
+		<div class="section-padding">
+			<div class="container">
+				<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<article class="half-height">
+					<h1>Oil patch takes aim at R&D spending to make way for more cuts</h1>
+						<p>Cash-starved oil sands companies are eyeing fresh cuts to research and development budgets – a sign that today’s depressed crude prices could hamper the innovation that analysts say is needed to lower production costs in the notoriously expensive sector.</p> 
+<p>Some of the industry’s biggest producers, including Cenovus Energy Inc. and Canadian Natural Resources Ltd., are putting spending on technology development under the microscope even as they seek cheaper ways to wring crude from Alberta.</p> 
+<p>It’s the latest indication that executives don’t expect prices to return to triple-digit levels any time soon. A Cenovus executive said Tuesday the company was now stress-testing its balance sheet against $50 (U.S.) crude to the end of 2017, hinting at more pain to come.</p> 
+						<p>Companies have so far scrapped billions of dollars’ worth of expansion projects, frozen salaries, and eliminated thousands of jobs to shore up finances amid the year-long rout.</p>
+						<a class="btn btn-primary topSpace" href="http://www.theglobeandmail.com/report-on-business/industry-news/energy-and-resources/oilpatch-takes-aim-at-rd-spending-to-make-way-for-more-cuts/article26374102/" target="_blank">Read More...</a>
+			</article>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="half-height">
+						<img class="article-img" src="img/oilSands.jpg" />
+						<div class="scroll-jack jack-center jack-bottom"><span onclick="scrollJack('#bottom')" class="fa fa-chevron-down animated infinite pulse" id='scroll-arrow'></span></div>
+					</div>
+				</div>			
+				</div>
+			</div>
+		</div>
+		<div class="section-padding" id="bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
+							<h1>Summary</h1>
+							<p>
+							This article is discusses several topics which are relevant to key terms in ‘Chapter 3: Productive Resources’.The prices of the <b>natural resource</b>, resources which occur in nature, oil has dropped significantly. The drop in oil price is affecting the budget decisions of Canadian oil companies operating in the Canadian oil sands who are engaged in this <b>primary industry</b>. These companies are trying to allocate their <b>productive resources</b> so that they can outlast the downturn in oil prices, oftentimes by closing oil wells. Some companies are choosing to cut back on their R&D budget while others are choosing to cut the cost of <b>human resources</b> by laying off workers.
+							</p>
+							<br>
+							<br>
+							<iframe height="275" src="https://www.youtube.com/embed/DaiwqwiJ98o" frameborder="0" allowfullscreen></iframe>
+						</article>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
+							<h1>Terms</h1>
+							<ul class="terms">
+								<li><b>Natural Resources:</b> All resources that occur in nature that have value and may be used in production. Also known to economist as “land”</li>
+								<li><b>Primary Industry:</b> Industries which are involved in producing staple products from the land such as wood, grain, iron ore etc.</li>
+								<li><b>Productive Resources:</b> labour or human resources; natural resources or land; capital resources; entrepreneur. All four resources are combined during production</li>
+								<li><b>Human Resources:</b> the services provided by workers; the skills and efforts that people use in an economy or a firm to produce goods and services</li>							
+							</ul>
+						<div class="nextChapter center">
+							<a href="#/4">Next Chapter &nbsp;<span class="fa fa-chevron-right animated infinite pulse"></span></a>
+						</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</script>
+<script type="text/ng-template" id="c4template.html">
+<div id="top">
+		<div class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="half-height">
+							<img class="article-img" src="img/decisionMaking.jpg" style="margin-left: -40px"/>
+							<div class="scroll-jack jack-center jack-bottom"><span onclick="scrollJack('#bottom')" class="fa fa-chevron-down animated infinite pulse" id='scroll-arrow' style="margin-left: -40px"></span></div>
+						</div>
+					</div>
+				<div class="col-md-6 col-sm-12">
+					<article class="half-height">
+							<h1>Think Like Uber: How to Validate Demand and Supply Before You Build</h1>
+						<p>At a $50 billion valuation, Uber is now valued higher than 80 percent of the S&P 500. With that kind of success, it's no surprise that a legion of startup minds are racing to cash in on the same approach. Who among us doesn't want to be the founder of the next Uber? We are seeing the "Uberization" of the American economy.</p>
+						<p>My company, Trustify, gives consumers access to vetted, experienced private investigators with the touch of a button, in the same way that Uber puts ride-seekers in touch with drivers. I've seen what works and what doesn't in this model, especially if you're trying to disrupt an established market. Before you speak to investors, build a product or hire a team, you must first validate demand and the labor force. </p>
+						<p>Uber did not invent the concept of aggregating disparate supply and demand to create a business. People have been creating marketplaces to buy and sell products and services since the Stone Age. But Uber stands out because they're loud, disruptive and lean -- leveraging cheap and accessible technology at scale</p>
+				<a class="btn btn-primary topSpace" href="http://www.huffingtonpost.com/young-entrepreneur-council/think-like-uber-how-to-va_b_8010376.html" target="_blank">Read More...</a>
+					</article>
+				</div>
+			
+				</div>
+			</div>
+		</div>
+		<div class="section-padding" id="bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
+							<h1>Summary</h1>
+							<p>
+							This article is a classic case study of how <b>supply</b> and <b>demand</b> can affect the economy. The author applies the principles of supply and demand to startup companies such as Uber, which essentially connects freelance drivers to demanding consumers. For startups looking to emulate Uber, the author cautions that these business find a niche <b>market</b> where there is both <b>inelastic demand</b> for their service and freelance suppliers to provide that service. One key point worth noting is that for many businesses trying to emulate Uber, they pick a niche which does not have enough demand. This results in a surplus of supply which ultimately results in the failure of the business.
+							</p>
+							<br>
+							<br>
+							<iframe height="275" src="https://www.youtube.com/embed/VcD6oY3pLlk" frameborder="0" allowfullscreen></iframe>
+						</article>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<article class="half-height">
+							<h1>Terms</h1>
+							<ul class="terms">
+								<li><b>Supply:</b> The quantities of a good or service that sellers are willing and able to sell at various prices in a particular period of time</li>
+								<li><b>Demand:</b> The quantity of a good or service that buyers are willing and able to buy at various prices in a particular period of time
+</li>
+								<li><b>Market:</b> Any network which brings together buyers and seller into contact with each in order to exchange goods and services. Many new markets are now being created online with the rise of the Internet.
+</li>
+								<li><b>Inelastic Demand:</b> Elasticity of Demand is how sensitive the quantity demanded is to a change in price. Inelastic Demand means that with changes in price, the quantity demanded will not change.</li>							
+							</ul>
+						<div class="nextChapter center" style="height: 175px">
+							<a href="#/3">Next Chapter &nbsp;<span class="fa fa-chevron-right animated infinite pulse"></span></a>
+						</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</script>
+<script type="text/ng-template" id="c5template.html"></script>
+<script type="text/ng-template" id="c6template.html"></script>
+<script type="text/ng-template" id="c7template.html"></script>
+<script type="text/ng-template" id="c8template.html"></script>
+<script type="text/ng-template" id="c9template.html"></script>
+<script type="text/ng-template" id="c10template.html"></script>
+<script type="text/ng-template" id="c11template.html"></script>
+<script type="text/ng-template" id="c12template.html"></script>
+<script type="text/ng-template" id="c13template.html"></script>
+<script type="text/ng-template" id="c14template.html"></script>
+<script type="text/ng-template" id="c15template.html"></script>
+<script type="text/ng-template" id="c16template.html"></script>
+
 	<script>
 	$(".strand").click(function() {
 		return false;

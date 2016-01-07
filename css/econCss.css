@@ -36,6 +36,12 @@ p{
 	font-size: 40px;
 	cursor: pointer;
 }
+.jack-bottom{
+	bottom: 90;
+}
+.absolute{
+	position: absolute;
+}
 .jack-center{
 	left: 48%;
 }
@@ -72,8 +78,13 @@ p{
 }
 
 .half-height{
-	height: 46vh;
-	position: absolute;
+	height: 92vh;
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+iframe{
+	width: 100%;
 }
 .article-img{
 	width: 100%;
