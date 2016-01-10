@@ -276,32 +276,32 @@ app.controller('c3controller', function($scope, $compile){
 	$scope.element = "<c3></c3>"
 });
 app.controller('c4controller', function($scope, $compile){
-	$scope.title = 'Chapter 4';
+	$scope.title = 'Chapter 6';
 	$scope.description = "Demand, Supply & Markets";
 	$scope.element = "<c4></c4>";
 });
 app.controller('c5controller', function($scope, $compile){
-	$scope.title = 'Chapter 5';
+	$scope.title = 'Chapter 7';
 	$scope.description = 'Spectrum of Markets';
 	$scope.element = "<c5></c5>";
 });
 app.controller('c6controller', function($scope, $compile){
-	$scope.title = 'Chapter 6';
+	$scope.title = 'Chapter 8';
 	$scope.description = "Distribution";
 	$scope.element = "<c6></c6>";
 });
 app.controller('c7controller', function($scope, $compile){
-	$scope.title = 'Chapter 7';
+	$scope.title = 'Chapter 9';
 	$scope.description = 'Labour Unions';
 	$scope.element = "<c7></c7>";
 });
 app.controller('c8controller', function($scope, $compile){
-	$scope.title = 'Chapter 8';
+	$scope.title = 'Chapter 4';
 	$scope.description = "The Entrepreneur";
 	$scope.element = "<c8></c8>";
 });
 app.controller('c9controller', function($scope, $compile){
-	$scope.title = 'Chapter 9';
+	$scope.title = 'Chapter 5';
 	$scope.description = 'Business Organization & Finance';
 	$scope.element = "<c9></c9>";
 });
